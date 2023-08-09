@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+
+        }
+        body{
+            background:url(http://wallpapers.net/lamp-at-the-wall-hd-wallpaper/download/5120x2160.jpg);
+            background-size: cover;
+            
+        }
+        #resClock{
+            border: 5px solid rgb(245, 0, 171);
+            border-radius: 20%;
+text-align: center;
+color: white;
+background-color: #262626;
+font-size: 65px;
+width: 28%;
+margin: auto;
+margin-top: 15%;
+box-shadow: 15px 15px 100px rgb(253, 4, 149) ;               
+
+}
+.ghadi{
+    color: rgb(253, 252, 251);
+    font-size: 70px;
+    text-align: right;
+    margin-right: 10%;
+}
+#mainline{
+    color: aliceblue;
+    font-size: 30px;
+    text-align: right;
+    margin-right: 6%;
+    margin: 100;
+}
+
+
+    </style>
+</head>
+<body>
+    <hr>
+    <div id="resClock" onload="clockdisplay()"></div>
+
+    <div class="ghadi">घड़ी</div>
+    <br>
+    <div id="mainline">
+        TIME DEKHO
+        <br> OR
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+               
+        <br> FIR BARBAD KRO
+
+    </div>
+
+    </body>
+    <script>
+       function clockDisplay(){
+        const dt  = new Date();
+        let sc = dt.getSeconds();
+        let hr = dt.getHours();
+        let mn = dt.getMinutes();
+        let ss = "AM";
+
+        if(hr == 0){
+            hr = 12;
+        }
+
+        if(hr > 12){
+            hr -= 12;
+            ss = "PM";
+        }
+
+        if(hr<10){
+            hr = "0" + hr;
+        }
+        if(mn<10){
+            mn = "0" + mn;
+        }
+        if(sc<10){
+            sc = "0" + sc;
+        }
+
+        
+        let td = hr + ":" + mn + ":" + sc + " " + ss;
+
+        document.getElementById('resClock').innerText = td;
+        let x = setTimeout(function(){clockDisplay()},1000);
+    }
+
+    clockDisplay();
+    </script>
+</html>

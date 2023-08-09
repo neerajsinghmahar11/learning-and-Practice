@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    text-align: center;
+   /* margin-left: 20%; */
+   /* width: 900px; */
+}
+.main-container{
+    border-radius: 10px;
+    width: 23%;
+    padding: 10px;
+    padding-left: 10px;
+    background-color: #262626;
+    color:#ffcc00;
+    margin: 15px;
+    overflow: hidden;
+    height: 400px;
+    font-family: sans-serif;
+    margin-left: 20%;
+    position: fixed;
+    overflow: hidden;
+
+}
+
+.header-data{
+    background-color: #ffcc00;
+    color: #262626;
+    border-radius: 10px;
+
+}
+
+.sending-area{
+    margin-top: 200px ;
+    overflow: hidden;
+    position: fixed;
+}
+#heart
+{
+    border-radius: 10px;
+}
+#heart:hover{
+    cursor: pointer;
+ background-color:  #ffcc00;
+}

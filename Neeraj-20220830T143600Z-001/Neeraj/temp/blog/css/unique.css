@@ -1,0 +1,40 @@
+body{
+	margin:0;
+	padding:0;
+	
+	background-position: center ;
+	background-color:black;
+}
+
+.coco{
+	color:black;
+	padding:25px;
+	height:200px;
+	width:200px;
+	border-radius:;
+	box-sizing:border-box;
+	text-align:center;
+	margin:5%;
+	animation-name:unique;
+	animation-duration:10s;
+	position:relative; 
+	direction:alternate-reverse ;
+}
+
+.coco{
+	font-size:2em;
+}
+
+@keyframes unique{
+	0%{left:0;top:0;}
+	10%{top:150px;left:100px;}
+	20%{top:50px;left:200px;}
+	30%{top:200px;left:400px;}
+	40%{top:50px;left:450px;}
+	50%{top:150px;left:550px;}
+	60%{top:50px;left:600px;}
+	70%{top:150px;left:700px;}
+	80%{top:350px;left:800px;}
+	90%{top:220px;left:950px;}
+	100%{top:150px;left:1050px;}
+}

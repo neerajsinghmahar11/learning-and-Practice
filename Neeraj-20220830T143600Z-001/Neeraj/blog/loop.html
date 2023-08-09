@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        h1{
+            color: aliceblue;
+        }
+        #ms{
+            margin: auto;
+            padding: 50px;
+            margin-left: 10%;
+            font-size: 20px;
+        }
+       
+        .output{
+            margin-top: 50px;
+        }
+        input,textarea,button{
+            font-size: 19px;
+        }
+        </style>
+        <script src="js/loop.js"></script>
+        <style>
+            body{
+                background-position: 0%;
+            }
+            #repeat{
+                color: chartreuse;
+                
+            }
+        </style>
+</head>
+<body background="https://wallpaperforu.com/wp-content/uploads/2021/03/Wallpaper-Enter-Skull-Hacker-Hacking-Computer-Hd-4k212048x1152.jpg" width=""></body>
+    <div id="ms">
+    <h1>Text Repeater</h1>
+    <input type="text" placeholder="Enter your Text" id="txt">
+    <input type="text" placeholder="Number of Times" id="nt">
+    <button id="repeat" onclick="textRepeater()">Repeat IT</button>
+    <div class="output">
+        <textarea id="rs" cols="55" rows="10" readonly id="rs">output comes Here..</textarea>
+    </div>
+    <button onclick="copydata()">copy data</button>
+</div>
+</body>
+</html>

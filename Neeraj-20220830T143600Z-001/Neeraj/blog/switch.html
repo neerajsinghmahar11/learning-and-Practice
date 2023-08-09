@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+    <script src="js/switch.js"></script>
+    <style>
+        body{
+            background-position: 0%;
+        }
+    </style>
+</head>
+<body background="https://wallpaperaccess.com/full/104815.jpg" width="">
+
+
+    <h1>Switch Case</h1>
+    <input type="text" id="usrin" placeholder="Enter number">
+    <button onclick="loopfun()">Click me</button>
+   
+    <p id="ans"></p> 
+</body>
+ <script>
+
+        let a= 1;
+        let txt= "";
+
+        switch(a){
+            case 1:txt ="one";break;
+            case 2:txt ="two";break;
+            case 3:txt ="three";break;
+            case 4:txt ="four";break;
+            case 5:txt ="five";break;
+            case 6:txt ="six";break;
+
+            default: txt="wrong input";
+
+        }
+
+        document.getElementById('ans').innerHTML=txt;
+    </script>
+
+</html>

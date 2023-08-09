@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <title>aim</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: darkslategray;
+        }
+        .fr{
+            width: 100%;
+            background-color: rgb(54, 48, 40);
+            margin: 0;
+            padding: 0;
+        }
+        .fr .form{
+            margin-left: 30%;
+            padding: 20px;
+        }
+        .fr input{
+            padding: 20px;
+            width: 400px;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        .fr button{
+            padding: 20px;
+            width: 440px;
+            background-color:  rgb(215, 240, 57);
+            color: rgb(255, 255, 255);
+            font-size: 1.5em;
+            outline: 0;
+            border-radius: 5%;
+            border: 0;
+            font-weight: 600;
+            letter-spacing: 5px;
+        }
+
+        .fr button:hover{
+            cursor: pointer;
+            background-color: rgb(201, 94, 94);
+        }
+
+        #er_msg{
+            color: red;
+            font-family: monospace;
+            font-size: 1.1em;
+        }
+    </style>
+    <script>
+        function pwdVer(){
+            var pw = document.getElementById('pass').value;
+            var ot =  document.getElementById('er_msg');
+
+            if(pw==''){
+                ot.innerHTML = 'Password field not be blank';
+            }
+            else if(pw.length <= 6){
+                ot.innerHTML = 'Password is too Short';
+            }else if(pw.length >= 15){
+                ot.innerHTML = 'Password length must be less than 15';
+            }else{
+                alert('Congratulation Your Password is Match all requirement');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <div class="icon">
+                    <a href="#">WHAT'S YOUR AIM</a>
+                </div>
+            </div>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">user</a></li>
+                <li><a href="#">login</a></li>
+                <li><a href="#">privacy</a></li>
+                <li><a href="#">about us</a></li>
+            </ul>
+            <form action="https://www.google.com/search">
+                <input type="search" name="" id="search" placeholder="search about company">
+                <button type="search" id="sbtn" ><i class="material-icons">search</i> </button>
+            </form>
+        </nav>
+          <div class="learn">
+                Learn
+            </div>
+       <div class="b-nav">
+        <div class="title">
+            <h2>we help special people to find there niche</h2>
+            <p>contact us to get full road map</p>
+        </div>
+        <div class="sample">
+          
+        </div>
+    </div>
+    </div>
+       
+
+
+        <div class="fr">
+            <div class="form">
+                <input type="text" id="username" placeholder="Username">
+                <br>
+                <input type="password" id='pass' placeholder="Password" title="Password must be Between 6 to 15 character">
+                <br>
+                <span id="er_msg"></span>
+                <br>
+                <br>
+               <button type="submit" onclick="pwdVer()">Sign Up</button>
+            </div>
+        </div>
+</body>
+</html>

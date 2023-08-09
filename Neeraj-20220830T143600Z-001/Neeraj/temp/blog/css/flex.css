@@ -1,0 +1,29 @@
+body{
+	margin:0;
+	padding:0;
+	
+}
+.flex{
+		background-color:black;
+		display:flex;
+		flex-flow:wrap;
+		height:600px;
+		flex-flow:space-between;
+		justify-content:center;
+		align-content:center;
+		align-items:center;
+
+}
+
+.flex div{
+	margin:12px;
+	padding:15px  ;
+	font-size:1.5em;
+	background-color:#00ff88;
+	
+}
+.flex div:hover{
+	background-color:#c5abd4;
+	cursor:pointer;
+	height:100px;
+}

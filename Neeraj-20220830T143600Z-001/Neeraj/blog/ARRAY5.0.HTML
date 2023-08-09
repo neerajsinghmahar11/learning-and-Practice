@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY5.0</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: monospace;
+        }
+
+        body{
+            background: url(https://images.wallpapersden.com/image/download/cool-4k-pattern_bGduZWyUmZqaraWkpJRobWllrWdma2U.jpg);
+            
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        padding-top: 10%;
+        
+            
+        }
+        h1,h2{
+            color: antiquewhite;
+        }
+
+        input{
+
+            color: blueviolet;
+            background-color: #262626;
+            font-size: large;
+border: 2px solid tomato;
+border-radius: 20%;
+        }
+        input:hover{
+            height: 40px;
+        }
+        #ot{
+            color: white;
+            font-family: monospace;
+           
+        }
+        #ot2{
+ color: white;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Array1</h1>
+    <input type="text" name="" id="usr">
+    <input type="button" value="Add Record" onclick="addData()">
+    <input type="button" value="DEL" onclick="del()">
+    <input type="button" value="CLEAR" onclick="clearData()">
+    <input type="button" value="Add Data" onclick="spliceData()">
+    <input type="button" value="Del Data" onclick="spliceDelData()">
+    <input type="button" value="Number while" onclick="whilefunData()">
+    <input type="button" value="Number do while" onclick="doWhilefunData()">
+    <div id="ot"></div>
+
+
+
+    <h1>Array2</h1>
+    <input type="text" name="" id="usr2">
+    <input type="button" value="Add Record" onclick="addData2()">
+    <input type="button" value="DEL" onclick="del2()">
+    <input type="button" value="CLEAR" onclick="clearData2()">
+    <div id="ot2"></div>
+
+    <input type="button" value="concate" onclick="mergeArray()">
+
+    <h1 id="res"></h1>
+    <div id="resot"></div>
+</body>
+    <script>
+
+        var arr = [];
+        var arr2 = [];
+        var resArr = [];
+
+        function addData(){
+    let n = document.getElementById('usr').value;
+    if(n.trim() != ""){
+        arr.push(n);
+    }
+    document.getElementById('usr').value = "";
+    showData();
+}
+
+function showData(){
+    let temp = "<ul type='square'>";
+    for(let a=0; a<arr.length; a++){
+        temp += "<li>" + arr[a] + "</li>";
+    }
+    temp += "</ul>";
+
+    document.getElementById('ot').innerHTML = temp;
+}
+
+function del(){
+    arr.pop();
+    showData();
+}
+
+function clearData(){
+        location.reload();   
+    }
+
+
+function spliceData(){
+    arr.splice(2,0,"Sourabh","Deepanshu");
+    showData()
+}
+
+function spliceDelData(){
+    arr.splice(2,2);
+    showData()
+}
+
+
+function whilefunData(){
+    let temp = 10;
+    while(temp!=0){
+        document.getElementById('ot').innerHTML += temp + "<br>";
+        temp--;
+    }
+}
+
+function doWhilefunData(){
+    let temp = 0;
+    do{
+        document.getElementById('ot').innerHTML += temp + "<br>";
+        temp--;
+    }while(temp>0);
+}
+
+
+
+/* Iske niche ka work Array 2 and result Array ka hai */    
+
+function addData2(){
+    let n = document.getElementById('usr2').value;
+    if(n.trim() != ""){
+        arr2.push(n);
+    }
+    document.getElementById('usr2').value = "";
+    showData2();
+}
+
+function showData2(){
+    let temp = "<ul type='square'>";
+    for(let a=0; a<arr2.length; a++){
+        temp += "<li>" + arr2[a] + "</li>";
+    }
+    temp += "</ul>";
+
+    document.getElementById('ot2').innerHTML = temp;
+}
+
+function del2(){
+    arr2.pop();
+    showData2();
+}
+
+function clearData2(){
+        location.reload();   
+    }
+
+
+function resData(ar){
+    let temp = "<ul type='square'>";
+    for(let a=0; a<ar.length; a++){
+        temp += "<li>" + ar[a] + "</li>";
+    }
+    temp += "</ul>";
+
+    return temp;
+}
+
+
+
+
+function mergeArray(){
+    resArr = arr.concat(arr2);
+    document.getElementById('res').innerHTML = "Merged Array";
+    document.getElementById('resot').innerHTML=resData(resArr);
+}
+
+</script>
+</html>
+
+        
+    </script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="message-box">
+           
+            <div class="msg-header">
+                <p class="header-data">Message Us</p> <hr><hr>
+            </div>
+            <div class="chat-area">
+                <div id="chatBox">
+                    <h5 id="chat-time"></h5>
+                 
+                    <p class="iusrText" id="iusrID"><span></span></p>
+                    <p class="usrText" id="usrID"><span></span></p>
+                </div>
+            </div>
+            <div class="sending-area">
+                <input type="text" id="msgBox"  placeholder="Enter Text here" autofocus>
+                <button id="heart" onclick="heartSend()">heart</button>
+                <button onclick="sendMessage()" id="click">send</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/chatbot.js"></script>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Date and time</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace ,sans-serif;
+}
+h1{
+    text-align: center;
+    font-size: 300%;
+}
+
+
+
+body{
+    padding: 20%;
+    
+}
+button{
+    color: aliceblue;
+    background-color: #262626;
+    border-radius: 20%;
+    padding: 5px;
+    font-size: 1.5em;
+    border: 2px solid rgb(5, 5, 143);
+   box-shadow: 5px 10px 15px  rgb(37, 37, 250);
+   margin: 3px;
+}
+button:hover{
+    height: 44px;
+}
+
+    </style>
+
+</head>
+<body background="E:\ADWP A BATCH\ADWP 6 to 7 A\Neeraj\blog\media\image\4.jpg" style="background-size: cover;">
+    <h1>DATE AND TIME</h1>
+    <br>
+    <br>
+    <br>
+    <h2 id="ot"></h2>
+    
+
+<button onclick="getDateData()">today date</button>
+<button onclick="getDateStringData()">today date string</button>
+<button onclick="getDateISOData()">today date ISO</button>
+<button onclick="getManualDateData()">manul date</button>
+<button onclick="getMillisecondData()">millisecond </button>
+<button onclick="getYearData()">year</button>
+<button onclick="getMonthData()">month</button>
+<button onclick="getMonthDateData()">date</button>
+<button onclick="getHoursData()">Hours</button>
+<button onclick="getMinuteData()">Minute</button>
+<button onclick="getSecondData()">Second</button>
+<button onclick="getMSData()">Millisecond</button>
+<button onclick="getTimeData()">1970 to Millisecond</button>
+<button onclick="getDayData()">Weekday</button>
+<button onclick="datenowData()">Date Now</button>
+
+</body >
+    <script>
+        
+        const dt = new Date();
+    
+    function getDateData(){
+        document.getElementById('ot').innerHTML = "" + dt;
+    }
+    
+    function getDateStringData(){
+        document.getElementById('ot').innerHTML = "" + dt.toDateString();
+    }
+  
+    function getDateISOData(){
+        document.getElementById('ot').innerHTML = "" + dt.toISOString();
+    }
+    
+    function getManualDateData(){
+        /* String, Comma, only year,year-month,ISO format sab except krta h */
+        const md = new Date(2018,08,17,11,30,30,56);
+        document.getElementById('ot').innerHTML = "" + md;
+    }
+
+    function getMillisecondData(){
+        var mm = Date.parse(dt);
+        document.getElementById('ot').innerHTML = "" + mm;
+    }
+    
+    function getYearData(){
+        document.getElementById('ot').innerHTML = "" + dt.getFullYear();
+    }
+    
+    function getMonthData(){
+        var mn = ["Jan","Feb","Mar","Aprl","May","Jun","July","Aug","Sep","Oct","Nov","Dec"];
+        document.getElementById('ot').innerHTML = "" + mn[dt.getMonth()];
+    }
+    
+    function getMonthDateData(){
+        document.getElementById('ot').innerHTML = "" + dt.getDate();
+    }
+    
+    function getHoursData(){
+        document.getElementById('ot').innerHTML = "" + dt.getHours();
+    }
+ 
+    function getMinuteData(){
+        document.getElementById('ot').innerHTML = "" + dt.getMinutes();
+    }
+
+    function getSecondData(){
+        document.getElementById('ot').innerHTML = "" + dt.getSeconds();
+    }
+   
+    function getMSData(){
+        document.getElementById('ot').innerHTML = "" + dt.getMilliseconds();
+    }
+
+    function getTimeData(){
+        document.getElementById('ot').innerHTML = "" + dt.getTime();
+    }
+    
+    function getDayData(){
+        document.getElementById('ot').innerHTML = "" + dt.getDay();
+    }
+    
+    function datenowData(){
+        document.getElementById('ot').innerHTML = "" + Date.now();
+    }
+
+    </script>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            background-color:#ffcc00;
+        }
+        #otu{
+            margin-top: 10%;
+            text-align: center;
+
+        }
+        h1{
+            font-size: 3.5em;
+            text-align: center;
+            font-family: sans-serif;
+            color: aliceblue;
+            background-color:   #262626;
+        }
+        button{
+            padding: 3px;
+            margin: 8px;
+            font-size: 2em;
+            font-family: sans-serif;
+        color:#ffcc00;
+        background-color: #262626;
+        border-radius: 20%;
+        animation-name: btn;
+        animation-duration: 4s;
+animation-direction: alternate-reverse;
+        animation-iteration-count: infinite;
+        box-shadow: 10px 10px 10px black;
+        }
+        @keyframes btn{
+            from{transform: scale(1,1);}
+            to{
+                transform: scale(1.1,1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Math function</h1>
+    <div id="otu">
+        
+        <h2 id="ot"></h2>
+        <button onclick="pifunc()">PI</button>
+        <button onclick="Eulernumber()">E</button>
+        <button onclick="SqRoot()">Square root 2</button>
+        <button onclick="SqRoot12()">Square root 1/2</button>
+        <button onclick="LN2()">LN 2</button>
+        <button onclick="LN10()">LN 10</button>
+        <button onclick="LOG2E()">LOG 2E</button>
+        <button onclick="LOG10E()">LOG 10E</button>
+        <br>
+        <br>
+        <button onclick="roundNum()">Round</button>
+        <button onclick="ceilNum()">Ceil</button>
+        <button onclick="floorNum()">Floor</button>
+        <button onclick="truncNum()">Trunc</button>
+        <button onclick="signNum()">sign</button>
+        <button onclick="powNum()">Power</button>
+        <button onclick="sqrtNum()">Square root</button>
+        <button onclick="absNum()">abs</button>
+        <button onclick="sinNum()">sin</button>
+    </div>
+    
+</body>
+<script>
+    function pifunc(){
+        document.getElementById('ot').innerHTML = Math.PI;
+    }
+    function Eulernumber(){
+        document.getElementById('ot').innerHTML = Math.E;
+    }      
+    function SqRoot(){
+        document.getElementById('ot').innerHTML = Math.SQRT2;
+    }
+    function SqRoot12(){
+        document.getElementById('ot').innerHTML = Math.SQRT1_2;
+    }
+    function LN2(){
+        document.getElementById('ot').innerHTML = Math.LN2;
+    }
+    function LN10(){
+        document.getElementById('ot').innerHTML = Math.LN10;
+    }
+    function LOG2E(){
+        document.getElementById('ot').innerHTML = Math.LOG2E;
+    }
+    function LOG10E(){
+        document.getElementById('ot').innerHTML = Math.LOG10E;
+    }
+    function roundNum(){
+    document.getElementById('ot').innerHTML = Math.round(5.8);
+}
+function ceilNum(){
+    document.getElementById('ot').innerHTML = Math.ceil(5.1);
+}
+function floorNum(){
+    document.getElementById('ot').innerHTML = Math.floor(5.8);
+}
+function truncNum(){
+    document.getElementById('ot').innerHTML = Math.trunc(5.8);
+}
+function signNum(){
+    document.getElementById('ot').innerHTML = Math.sign(-6);
+}
+function powNum(){
+    document.getElementById('ot').innerHTML = Math.pow(2,5);
+}
+function sqrtNum(){
+    document.getElementById('ot').innerHTML = Math.sqrt(5);
+}
+function absNum(){
+    document.getElementById('ot').innerHTML = Math.abs(5.55);
+}
+function sinNum(){
+    document.getElementById('ot').innerHTML = Math.sin(90*Math.PI/180);
+}
+
+    
+</script>
+</html>

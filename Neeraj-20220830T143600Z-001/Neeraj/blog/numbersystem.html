@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number system</title>
+    <style>
+        body{
+            background-color:#ffcc00 ;
+            font-size: 150%;  
+              color: #262626;
+              text-align: center;
+        }
+       button{
+       
+       }
+    </style>
+</head>
+<body>
+    <h2>prime numbers</h2>
+    <div id="ot"></div>
+    <input type="number" name="" id="number">
+    <button onclick="demo()">click</button>
+
+
+    <h2>Armstrong series :-</h2>
+    <input type="number" name="" id="armser" placeholder=" Starting number">
+    <input type="number" name="" id="armser2" placeholder=" Ending number">
+    <button onclick="armstrongseries()">click me</button>
+    <h2 id="ot2"></h2>
+    <br>
+
+
+    <h2>Fibonacci series :-</h2>
+    <h2> how much Fibonacci numbers you want : <input type="number" name="" id="fibnum">
+    <button onclick="fibbonaccifunc()">click me</button></h2>
+    <h2 id="ot3"></h2>
+    <br>
+
+
+</body>
+<script>
+
+function demo(){
+
+    var num = document.getElementById("number").value;
+    var isprime;
+    for(var i=2; i<=num; i++) {
+        isprime= 1;
+        for(var j=2; j<=i/2; j++) {
+            if(i%j == 0) {
+                isprime = 0;
+                break;
+            }
+        }
+        if(isprime == 1) {
+            document.write(i+"<br>");
+        }
+    }
+}
+   
+
+function armstrongseries(){
+    var a = document.getElementById('armser').value;
+    var b = document.getElementById('armser2').value;
+    var x = Number(a);
+    var temp="";
+    for(i=x; i<b; i++){
+        var num = i;
+        var sum = 0;
+        var len = num.toString().length;
+        while(num!=0){
+            armstrong = num % 10;
+            power = armstrong**len;
+            sum = sum+power;
+            num = parseInt(num/10);
+        }
+        if(sum == i){
+            temp += i + "<br>";
+        }
+    }
+    document.getElementById('ot2').innerHTML = temp;
+}
+
+
+
+function fibbonaccifunc(){
+    let n = document.getElementById('fibnum').value;
+    let a1=0;
+    let a2=1;
+    temp="0<br>1<br>";
+        for(let i=3; i<=n; i++){
+        a3 = a1+a2;
+        a1=a2;
+        a2=a3;
+        temp += a3 +"<br>";
+    }
+    document.getElementById('ot3').innerHTML=temp;
+}
+    
+</script>
+</html>

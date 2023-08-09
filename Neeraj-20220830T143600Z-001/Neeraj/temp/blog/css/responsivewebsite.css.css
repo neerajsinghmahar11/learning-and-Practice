@@ -1,0 +1,82 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+
+
+.myImg{
+	float:left;
+	height:300px;
+	width:30%;
+	border-radius:50%;
+	border:5px solid green;
+}
+
+.blur-fx{
+	filter:blur(3px);
+}
+.brightness-fx{
+	filter:brightness(40%);
+}
+.contrast-fx{
+	filter:contrast(200%);
+}
+.grayscale-fx{
+	filter:grayscale(40%);
+}
+.hue-rotate-fx{
+	filter:hue-rotate(45deg);
+}
+.invert-fx{
+	filter:invert(100%);
+}
+.opacity-fx{
+	filter:opacity(50%);
+}
+.saturate-fx{
+	filter:saturate(80%);
+}
+.sepia-fx{
+	filter:sepia(20%);
+}
+.drop-shadow-fx{
+	filter:drop-shadow(8px 8px 10px red);
+}.myImg{
+	float:left;
+	height:300px;
+	width:30%;
+	border-radius:50%;
+	border:5px solid green;
+}
+
+.blur-fx{
+	filter:blur(3px);
+}
+.brightness-fx{
+	filter:brightness(40%);
+}
+.contrast-fx{
+	filter:contrast(200%);
+}
+.grayscale-fx{
+	filter:grayscale(40%);
+}
+.hue-rotate-fx{
+	filter:hue-rotate(45deg);
+}
+.invert-fx{
+	filter:invert(100%);
+}
+.opacity-fx{
+	filter:opacity(50%);
+}
+.saturate-fx{
+	filter:saturate(80%);
+}
+.sepia-fx{
+	filter:sepia(20%);
+}
+.drop-shadow-fx{
+	filter:drop-shadow(8px 8px 10px red);
+}

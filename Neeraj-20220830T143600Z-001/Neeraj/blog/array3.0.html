@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array 3.0</title>
+   
+  
+</head>
+<body background="https://wallpaperaccess.com/full/4589350.jpg">
+  
+
+    
+    <input type="text" id="usrin" placeholder="kuch bhi likh de">
+   
+    <input type="button" value="add" onclick="addElement()">
+    <input type="button" value="show data" onclick="showdata()">
+  
+
+       <input type="button" value="delete" onclick="deldata()">
+    <input type="button" value="sort" onclick="sortdata()">
+    <input type="Button" value="Reverse" onclick = "revData()">
+    <input type="Button" value="Sort Num" onclick = "numSortData()">
+    <input type="Button" value="Reverse Num" onclick = "numRevData()">
+    <input type="Button" value="Sort loop" onclick = "loopSortData()">
+    <p id="ot"></p>
+
+
+</body>
+    <script>
+
+        var temp =[];
+        function addElement(){
+            let n = document.getElementById('usrin').value;
+            temp.push(n);
+            document.getElementById('usrin').value = "";
+            showData();
+        }
+
+        function showData(){
+        document.getElementById('ot').innerHTML = "";
+        for(let a = 0; a< temp.length; a++){
+            document.getElementById('ot').innerHTML += temp[a] + "<br>";
+        }
+        }
+
+        function deldata(){
+            temp.pop();
+            showData();
+        }
+        
+        function sortdata(){
+            temp.sort();
+            showData();
+        }
+        function revData(){
+            temp.reverse();
+            showData();
+        }
+        function numSortData(){
+        temp.sort(function(a,b){return a-b;});
+       showData();
+    }
+
+    function numRevData(){
+        temp.sort(function(a,b){return b-a;});
+       showData();
+    }
+   
+    function loopSortData(){
+        // bubble Sorting mathod 
+        let t = 0;
+
+        for(let a=0; a<temp.length; a++){
+            for(let b = 0; b < temp.length - a; b++){
+                
+                if(temp[b]>temp[b+1]){
+                    t = temp[b];
+                    temp[b] = temp[b+1];
+                    temp[b+1] = t;
+                }
+
+            }
+        }
+
+       showData();
+    }
+
+
+    </script>
+</html>

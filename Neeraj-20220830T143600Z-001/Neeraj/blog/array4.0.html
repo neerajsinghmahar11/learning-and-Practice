@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        body{
+            background-color: black;
+            font-family: sans-serif;
+            color: aquamarine;
+        }
+            input{
+                color: aquamarine;
+              font-size: 1.5em;
+
+            }
+       
+    </style>
+</head>
+<body>
+    <h1>Array</h1>
+<div id="b">
+
+
+    <input type="text" name="" id="usr">
+    <input type="button" value="Add Record" onclick="addData()">
+    <input type="button" value="MAX" onclick="maxData()">
+    <input type="button" value="MAX Manual" onclick="maxDataManual()">
+    <input type="button" value="MIN" onclick="minData()">
+    <input type="button" value="Sort" onclick="sortData()">
+    <input type="button" value="Random" onclick="randomData()">
+    <input type="button" value="DEL" onclick="del()">
+    <input type="button" value="CLEAR" onclick="clearData()">
+</div>
+    <h2 id="ot0"></h2>
+    <div id="ot"></div>
+    
+</body>
+<script>
+    var arr = [];
+
+    function addData(){
+        let n = document.getElementById('usr').value;
+        if(n.trim() != ""){
+            arr.push(n);
+        }
+        document.getElementById('usr').value = "";
+        showData();
+    }
+    
+    function showData(){
+        let temp = "<ul type='square'>";
+        for(let a=0; a<arr.length; a++){
+            temp += "<li>" + arr[a] + "</li>";
+        }
+        temp += "</ul>";
+
+        document.getElementById('ot').innerHTML = temp;
+    }
+
+    function del(){
+        arr.pop();
+        showData();
+    }
+
+    function sortData(){
+        arr.sort(function(a,b){ return a-b;});
+        showData();
+    }
+
+    function randomData(){
+        arr.sort(function(a,b){ return 0.5 - Math.random();});
+        showData();
+    }
+ 
+    function maxData(){
+        document.getElementById('ot0').innerHTML = "Max: " + Math.max.apply(null, arr);
+    }
+    
+    
+    function maxDataManual(){
+        let mxNum = -Infinity;
+
+        arr.sort();
+
+        for(let a = arr.length-1; a >= 0; a--){
+           
+            if(arr[a]>mxNum){
+                mxNum = arr[a];
+            }
+        }
+
+        document.getElementById('ot0').innerHTML = "Max: " + mxNum;
+    }
+
+    function minData(){
+        document.getElementById('ot0').innerHTML = "Min: " + Math.min.apply(null, arr);
+    }
+
+    function clearData(){
+        location.reload();   
+    }
+
+
+</script>
+</html> 

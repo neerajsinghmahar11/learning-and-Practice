@@ -1,0 +1,30 @@
+button{
+    text-align: center;
+    border-radius: 10px;
+     color: rgb(114, 8, 8);
+     border-color: rgb(231, 217, 11);
+     font-size: 2em;
+     font-family: sans-serif;
+     animation-name: unique;
+}
+button:hover{
+    background-color: rgb(56, 180, 153);
+    height : 70px;
+}
+span{
+    color: white;
+    font-size: 2em;
+    font-family: sans-serif;
+}
+@keyframes unique{
+	0%{left:0;top:0;}
+	10%{top:150px;left:100px;}
+	20%{top:50px;left:200px;}
+	30%{top:200px;left:400px;}
+	40%{top:50px;left:450px;}
+	50%{top:150px;left:550px;}
+	60%{top:50px;left:600px;}
+	70%{top:150px;left:700px;}
+	80%{top:350px;left:800px;}
+	90%{top:220px;left:950px;}
+	100%{top:150px;left:1050px;}

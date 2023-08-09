@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wallClock</title>
+
+    <style>
+        body{
+            margin-top: 5%;
+            background: url(https://static-cse.canva.com/blob/571503/Patterns303.jpg) ;
+            background-size:100%;
+            background-repeat: no-repeat;
+        }
+        
+        
+        #bgClock{
+            background-image: url("media/image/clock.png.jpg");
+            background-size: 100%;
+            height: 35vw;
+            width: 35vw;
+            margin: auto;
+            position: relative;
+            border-radius: 50%;
+
+           
+            
+        }
+
+        #hrs, #mns, #scs{
+            background-color: black;
+            position: absolute;
+            transform-origin: bottom;
+            box-shadow: 10px 10px 10px;
+        }
+
+        #hrs{
+            height: 25%;
+            width: 2%;
+            border-radius: 5px;
+            top: 24.5%;
+            left: 49.5%;
+        }
+        #mns{
+            height: 30%;
+            width: 2%;
+            border-radius: 5px;
+            top: 21%;
+            left: 49.5%;
+        }
+        #scs{
+            height: 35%;
+            width: 1%;
+            border-radius: 5px;
+            top: 15%;
+            left: 49.5%;
+            background-color: rgb(211, 17, 17);
+        }
+    </style>
+    <script src="js/analogclock.js"></script>
+</head>
+<body>
+    <div id="bgClock">
+        <div id="hrs"></div>
+        <div id="mns"></div>
+        <div id="scs"></div>
+    </div>
+</body>
+</html>

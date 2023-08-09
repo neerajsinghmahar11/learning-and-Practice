@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays</title>
+</head>
+<body>
+    
+    <h2 id="ot"></h2>
+    <h2 id="ot1"></h2>
+    <h2 id="ot2"></h2>
+    <h2 id="ot3"></h2>
+    <h2 id="ot4"></h2>
+    <h2 id="ot5"></h2>
+
+</body>
+<script>
+
+    //for.each
+    let name=["suhail","neeraj","deepanshu","sourabh","daksh","meenakshi"];
+    let text="<ol>";
+    
+    name.forEach(myfun);
+    text+="</ol>"
+
+    function myfun(value){
+        text+="<li>"+ value +"</li>";
+
+    }
+        document.getElementById('ot').innerHTML=text;
+   </script>
+
+    
+
+  
+  
+    
+
+ <script>
+    //forin
+    let name1=["suhail","neeraj","deepanshu","sourabh","daksh","meenakshi"];
+    let text1="<ul>";
+    for(let s in name1){
+        text1+="<li>"+ s + "</li>";
+        }
+    text1+="</ul>";
+        document.getElementById('ot1').innerHTML=text1;
+
+   </script>
+
+
+ <script>
+    //forof
+    let name2=["suhail","neeraj","deepanshu","sourabh","daksh","meenakshi"];
+    let text2="<ul>";
+    for(let s of name2){
+        text2+="<li>"+ s + "</li>";
+        }
+    text2+="</ul>";
+        document.getElementById('ot2').innerHTML=text2;
+
+   </script>
+
+   <script>
+       let name3=["suhail","neeraj","deepanshu","sourabh","daksh","meenakshi"];
+       name3.push('kanchan');
+       document.getElementById('ot3').innerHTML = name3;
+
+          </script>
+
+<script>
+    let name4=["suhail","neeraj","deepanshu","sourabh","daksh","meenakshi"];
+
+    document.getElementById('ot4').innerHTML = name4.join("*");
+
+    
+</script>
+
+
+<script>
+    let name5=["suhail","neeraj","deepanshu","sourabh","daksh","meenakshi"];
+    name5.pop();
+    document.getElementById('ot5').innerHTML = name5;
+
+    
+</script>
+
+
+</html>

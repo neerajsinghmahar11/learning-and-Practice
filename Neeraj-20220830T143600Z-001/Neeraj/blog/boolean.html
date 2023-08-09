@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolean algebra</title>
+    
+    <style>
+        body{
+            text-align: center;
+            font-weight: 150%;
+        }
+    </style>
+
+</head>
+<body>
+  
+    <h3>sum of Natural Number </h3>
+    <h3>Enter number : <input type="text" id="num1">
+    <button onclick="naturalnum()">click me</button></h3>
+    <h3 id="ot1"></h3>
+    <br>
+
+    <h3>sum of the square of Natural Number </h3>
+    <h3>Enter number : <input type="text" id="num2">
+    <button onclick="squarenum()">click me</button></h3>
+    <h3 id="ot2"></h3>
+    <br>
+
+    <h3>sum of the cube of Natural Number </h3>
+    <h3>Enter number : <input type="text" id="num3">
+    <button onclick="cubenum()">click me</button></h3>
+    <h3 id="ot3"></h3>
+    <br>
+
+    <h3>sum of the even Natural Number </h3>
+    <h3>Enter number : <input type="text" id="num4">
+    <button onclick="evennum()">click me</button></h3>
+    <h3 id="ot4"></h3>
+    <br>
+
+    <h3>sum of the odd Natural Number </h3>
+    <h3>Enter number : <input type="text" id="num5">
+    <button onclick="oddnum()">click me</button></h3>
+    <h3 id="ot5"></h3>
+    <br>
+
+    <h3>Average of  Natural Number </h3>
+    <h3>Enter number : <input type="text" id="num6">
+    <button onclick="averagenaturalnum()">click me</button></h3>
+    <h3 id="ot6"></h3>
+    <br>
+
+</body>
+<script>
+    function naturalnum(){
+        var a = document.getElementById('num1').value;
+        var n = Number(a);
+        result = n*(n+1)/2;
+        document.getElementById('ot1').innerHTML=result;
+    }
+
+    function squarenum(){
+        var a = document.getElementById('num2').value;
+        var n = Number(a);
+        result = n*(n+1)*(2*(n)+1)/6;
+        document.getElementById('ot2').innerHTML=result;
+    }
+
+    function cubenum(){
+        var a = document.getElementById('num3').value;
+        var n = Number(a);
+        result = (n*(n+1)/2)**2;
+        document.getElementById('ot3').innerHTML=result;
+    }
+
+    function evennum(){
+        var a = document.getElementById('num4').value;
+        var n = Number(a);
+        result = n*(n+1);
+        document.getElementById('ot4').innerHTML=result;
+    }
+
+    function oddnum(){
+        var a = document.getElementById('num5').value;
+        var n = Number(a);
+        result = n**2;
+        document.getElementById('ot5').innerHTML=result;
+    }
+
+    function averagenaturalnum(){
+        var a = document.getElementById('num6').value;
+        var n = Number(a);
+        result = (n+1)/2;
+        document.getElementById('ot6').innerHTML=result;
+    }
+</script>
+
+</html>
