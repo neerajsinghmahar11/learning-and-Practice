@@ -1,0 +1,71 @@
+<!Doctype html>
+<html>
+<head>
+        <title>some CSS property</title>
+		<meta name="viewport"content="width=device-width,inital-scale=1.0">
+		
+</head>
+<body>
+       <div class="main-area">
+	   <div class="header-area">
+	   <header>
+	   <div class="web-title">
+	   <div id="main-title">WORLD VISION INERNATION</DIV>
+	   <div id="sub-title">>we make you future ready</DIV>
+	   </div>
+	   <div class="hd-lower">
+	      <nav>
+		  <ul>
+		  <li><a href="#Home">"Home</a></li>
+							<li><a href="#Branches">Branches</a></li>
+							<li><a href="#course">course</a></li>
+							<li><a href="#gallery">gallery</a></li>
+							<li><a href="#Blog">Blog</a></li>
+							<li style="float:right;">
+							<form action="https://www.google.com/search"method="GET" target="_blank" autocomplete="OFF">
+							<input type="search"placeholder="gsearch"name="q">
+							<input type="submit" value="search">
+							</form>
+							</li>
+						</ul>
+					</nav>
+				</header>
+			</div>
+		  <div class="main-content">
+				
+				
+				
+				<div id="gradient-test">
+					
+					
+				</div>
+				
+				
+				
+				<div class="frame-div">
+					<iframe id="designing frame" name="content_frame">
+					
+					
+					</iframe>
+				</div>
+				
+			</div>
+			<div class="footer-area">
+				<footer>
+					<div id="Go-top"><p><a href="#main-title">top</a></p></div>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,139 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+.content{
+	height:1000px;
+	
+}
+
+.title{
+	font-family: 'Fuzzy Bubbles', cursive;	
+	letter-spacing:10px;
+	text-align:center;
+	color:black;
+}
+
+.m-title{
+	font-size:3em;
+	margin:0;
+	padding:0;
+	text-shadow:3px 3px 5px #60f542;
+}
+
+.s-title{
+	font-size:1.5em;
+	margin:0;
+	padding:0;
+}
+
+
+
+nav{
+	top:0;
+	position:sticky;
+	position:-webkit-sticky;	
+	background-color:#aaa;
+	font-size:1.3em;
+}
+
+nav ul{
+	position:relative;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+nav li{
+	float:left;
+}
+
+nav a, .dropbtn{
+	text-decoration:none;
+	display:block;
+	padding:20px;
+	color:black;
+	transition:font-size 0.5s;
+}
+
+.dropbtn{
+	background-color:transparent;
+	border:none;
+	font-size:1.2em;
+}
+
+nav a:hover{
+	font-size:1.5em;
+}
+
+
+footer{
+	height:200px;
+	background-color:black;
+}
+
+
+.dropdown{
+	position:relative;
+	display:inline-block;
+}
+
+.drop-content{
+	display:none;
+	position:absolute;
+	background-color:white;
+	min-width:200px;
+	z-index:1;
+	box-shadow:0px 8px 16px rgba(0,0,0,0.2);
+	padding:10px 14px;
+}
+
+.dropdown:hover  .drop-content{
+	display:block;
+}
+
+
+/* For small scree device */
+
+
+@media screen and (max-width:420px){
+	
+
+.title{
+	letter-spacing:1px;
+	text-align:center;
+	color:black;
+}
+
+.m-title{
+	font-size:2rem;
+}
+
+.s-title{
+	font-size:1.2em;
+}
+
+nav{
+	position:relative;
+	background-color:#aaa;
+	font-size:1.1em;
+	text-align:center;
+}
+
+nav li{
+	float:none;
+}
+
+nav a{
+	padding:10px;
+	color:black;
+	transition:font-size 0.5s,border 0.5s;
+}
+
+nav a:focus{
+	font-size:1.5em;
+	border:3px solid black;
+}
+	
+}

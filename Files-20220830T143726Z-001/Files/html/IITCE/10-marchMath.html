@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Function</title>
+    <style>
+        #otu{
+            margin: auto;
+            margin-left: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div id="otu">
+    <h1>Math function</h1>
+    <h2 id="ot"></h2>
+    <button onclick="pifunc()">PI</button>
+    <button onclick="Eulernumber()">E</button>
+    <button onclick="SqRoot()">Square root 2</button>
+    <button onclick="SqRoot12()">Square root 1/2</button>
+    <button onclick="LN2()">LN 2</button>
+    <button onclick="LN10()">LN 10</button>
+    <button onclick="LOG2E()">LOG 2E</button>
+    <button onclick="LOG10E()">LOG 10E</button>
+    <br>
+    <br>
+    <button onclick="roundNum()">Round</button>
+    <button onclick="ceilNum()">Ceil</button>
+    <button onclick="floorNum()">Floor</button>
+    <button onclick="truncNum()">Trunc</button>
+    <button onclick="signNum()">sign</button>
+    <button onclick="powNum()">Power</button>
+    <button onclick="sqrtNum()">Square root</button>
+    <button onclick="absNum()">abs</button>
+    <button onclick="sinNum()">sin</button>
+</div>
+</body>
+<script>
+function pifunc(){
+    document.getElementById('ot').innerHTML = Math.PI;
+}
+function Eulernumber(){
+    document.getElementById('ot').innerHTML = Math.E;
+}
+function SqRoot(){
+    document.getElementById('ot').innerHTML = Math.SQRT2;
+}
+function SqRoot12(){
+    document.getElementById('ot').innerHTML = Math.SQRT1_2;
+}
+function LN2(){
+    document.getElementById('ot').innerHTML = Math.LN2;
+}
+function LN10(){
+    document.getElementById('ot').innerHTML = Math.LN10;
+}
+function LOG2E(){
+    document.getElementById('ot').innerHTML = Math.LOG2E;
+}
+function LOG10E(){
+    document.getElementById('ot').innerHTML = Math.LOG10E;
+}
+function roundNum(){
+    document.getElementById('ot').innerHTML = Math.round(5.8);
+}
+function ceilNum(){
+    document.getElementById('ot').innerHTML = Math.ceil(5.1);
+}
+function floorNum(){
+    document.getElementById('ot').innerHTML = Math.floor(5.8);
+}
+function truncNum(){
+    document.getElementById('ot').innerHTML = Math.trunc(5.8);
+}
+function signNum(){
+    document.getElementById('ot').innerHTML = Math.sign(-6);
+}
+function powNum(){
+    document.getElementById('ot').innerHTML = Math.pow(2,5);
+}
+function sqrtNum(){
+    document.getElementById('ot').innerHTML = Math.sqrt(5);
+}
+function absNum(){
+    document.getElementById('ot').innerHTML = Math.abs(5.55);
+}
+function sinNum(){
+    document.getElementById('ot').innerHTML = Math.sin(90*Math.PI/180);
+}
+
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some JS Property</title>
+    <style>
+        #ot,#ot1{
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+   <div style="margin-left: 25%;">
+    <h1>Some function</h1>
+    <div id="ot"></div>
+    <div id="ot1"></div>
+    <button onclick="randomNumber()">Random Number</button>
+   </div>
+</body>
+<script>
+function randomNumber(){
+    let num = rNum(10,100);
+    document.getElementById('ot').innerHTML = num;
+    // alert('Hello World');
+    // let t = prompt('Enter your Name');
+    //  let t = confirm('Are youn sure do you want to Delete');
+    // let t = window;
+    // t = window.innerHeight;
+    // t = window.innerWidth;
+    // t = window.outerHeight;
+    // t = scrollX;
+    let t = location;
+    // t = location.reload();
+    // t = location.href;
+    // t = location.href = ("https://www.google.com/");
+    t = location.toString();
+
+    document.getElementById('ot1').innerHTML = t;
+    // console.log('Hello world')
+}
+
+function rNum(a,b){
+    let big = a;
+    let small = b;
+
+    if(a<b){
+        big = b;
+        small = a;
+    }
+    
+    return Math.floor(Math.random()*(big-small)+small);
+
+}
+</script>
+</html>

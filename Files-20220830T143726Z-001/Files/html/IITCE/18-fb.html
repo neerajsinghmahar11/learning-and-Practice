@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <h2 id="ot"></h2>
+    <h2 id="ot1"></h2>
+    <h2 id="ot2"></h2>
+</body>
+<script>
+    // let name = ["Sourabh", "Deppanshu","Neeraj","Kartik"];
+
+    let name = new Array("Sourabh", "Neerraj","Deepanshu","Kartik","Meenakshi");
+
+
+    name[name.length] = "Alice";
+    name[name.length] = "Anuradha";
+    name[name.length] = "Kanchan";
+
+    document.getElementById('ot').innerHTML = name;
+    
+    document.getElementById('ot1').innerHTML = name.sort();
+
+    let temp = "<ul>";
+    for(let a = 0; a <= name.length - 1; a++)
+    {
+        temp += "<li>" + name[a] + "</li>";
+    }
+    temp += "</ul>";
+
+    document.getElementById('ot2').innerHTML = temp;
+</script>
+</html>

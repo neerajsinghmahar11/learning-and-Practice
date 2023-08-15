@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Function</title>
+    <script src="js/18-dec.js"></script>
+    <style>
+        #usrin, .ot, button,input{
+            background-color: rgb(219, 232, 243);
+            font-size: 1.5em;;
+        }
+
+        #usrot{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#">
+        <textarea name="" id="usrin" cols="100" rows="10" placeholder="What's in your mind?"></textarea>
+    </form>
+    <br>
+    <div class="ot">
+        Output Comes here...
+        <p id="usrot"></p>
+    </div>
+
+    <button onclick="findlen()">Find length of Text</button>
+    <br>
+    <br>
+    
+    <form action="#">
+        <input type="text" name="" id="startnum" placeholder="start num">
+        <input type="text" name="" id="endnum" placeholder="End num">
+    </form>
+    <button onclick="slicefun()">slice</button>
+    <button onclick="substringfun()">SubString</button>
+    <button onclick="substrfun()">substr</button>
+
+    <br>
+    <br>
+    
+    <form action="#">
+        <input type="text" name="" id="odata" placeholder="Old Data">
+        <input type="text" name="" id="ndata" placeholder="New Data">
+    </form>
+    <button onclick="replaceData()">Replace</button>
+
+    <br>
+    <br>
+
+    <button onclick="upperfun()">Upper Case</button>
+    <button onclick="lowerfun()">lower Case</button>
+    <button onclick="trimfun()">Trim</button>
+
+
+    <br>
+    <br>
+
+    <form action="#">
+        <input type="text" name="" id="sr" placeholder="Search term">
+    </form>
+        <button onclick="searchfun()">Search</button>
+</body>
+</html>

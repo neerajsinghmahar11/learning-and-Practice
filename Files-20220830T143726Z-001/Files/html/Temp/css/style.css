@@ -1,0 +1,151 @@
+body{
+	margin:0;
+	padding:0;
+	font-family:Praise;
+}
+
+.main-content{
+	height:1000px;
+	background-color:grey;
+	margin-top:10px;
+}
+
+.footer-area{
+	height:200px;
+	background-color:black;
+	color:white;
+}
+
+.header-area{	
+}
+
+.hd-lower ul{
+	background-color:black;
+	color:white;
+	margin:0px;
+	padding:0;
+	list-style-type:none;
+	position:fixed;
+	position:sticky;
+	position:-webkit-sticky;
+	overflow:hidden;
+	width:100%;
+	top:0;
+	font-size:1.1em;
+}
+
+.hd-lower li a{
+	color:white;
+	text-decoration:none;
+	padding:16px 14px;
+	display:block;
+}
+
+.hd-lower li{
+	float:left;
+}
+
+.active{
+	background-color:orange;
+}
+
+.hd-lower li a:hover:not(.active){
+	border:2px solid white;
+	border-radius:5px;
+}
+
+.hd-lower input{
+	padding:5px;
+	font-size:15px;
+}
+
+.hd-lower form{
+	padding:10px;
+}
+
+.web-title{
+	font-family:Comic Sans MS;
+	margin:auto;
+	text-align:center;
+	word-spacing:10px;
+	padding:10px 0;
+}             
+
+#main-title{
+	font-size:2em;
+	letter-spacing:4px;
+	text-shadow:3px 4px 5px red,0px 0px 20px Green;
+	color:white;
+} 
+
+#sub-title{
+	font-size:1.2em;
+}               
+
+.white-Text{
+	color:white;
+}
+
+#p-data{
+	padding:5px;
+	text-align:justify;
+}
+
+#sampledata1{
+	text-indent:40px;
+	white-space:wrap;
+}
+
+#sampledata2{
+	padding:50px;
+	border:3px solid green;
+	outline:2px solid yellow;
+	max-width:700px;
+}
+
+#Go-top{
+	border:2px solid white;
+	width:5%;
+	padding:0px;
+	text-align:center;
+	font-size:1em;
+	position:fixed;
+	overflow:auto;
+	left:0;
+	bottom:0;
+	background-color:black;
+	border-radius:50%;
+}
+
+#Go-top a{
+	color:white;
+	text-decoration:none;
+	display:block;
+	width:100%;
+}
+
+#Go-top:hover{
+	box-shadow:10px 10px 50px white,0 0 10px red;
+}
+
+
+#myframe{
+	border:20px solid transparent;
+	margin:10px;
+	height:500px;
+	width:400px;
+	border-image:url('https://www.freeiconspng.com/thumbs/borders-png/borders-png-1.png') 10% stretch;
+	float:right;
+	padding:0;
+}
+
+
+#gradient-test{
+	height:500px;
+	width:400px;
+	border:2px solid white;
+	float:left;
+	margin:10px;
+	border-radius:50%;
+	background-image:repeating-conic-gradient(red 10%,yellow 20%);
+}

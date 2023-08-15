@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Function</title>
+</head>
+<body>
+    <div style="margin-left: 20%;">
+        <h1>Functions</h1>
+        <div id="ot"></div> 
+        <button onclick="tryFunc()">Click me</button> 
+        <button onclick="tryCatchFunc()">Click me 2</button> 
+        <div id="ott"></div>
+        
+        <br>
+        <br>
+        <br>
+        <input type="text" id="si" placeholder="google" oninput="linkSearch()" autofocus>
+
+        <ul>
+            <li class="link"><a href="https://www.google.com/">Google</a></li>
+            <li class="link"><a href="https://www.google.com/search?q=royal%20enfield%20himalayan%20scram%20411&oq&ved=0ahUKEwjOl4K0lcj2AhWGK5QKHQ2sAe0Q470GCCg&sclient=mweb-insp&gs_lp=Egltd2ViLWluc3C4ARkqDQgAEAAYjwEY6gIYlgQyCxAAGI8BGOoCGJYEMgsQABiPARjqAhiWBDILEAAYjwEY6gIYlgQyCxAAGI8BGOoCGJYEMgsQABiPARjqAhiWBDILEAAYjwEY6gIYlgQyCxAAGI8BGOoCGJYEmAPzCrIGBhB_GH8oAQ&gs_ss=1&biw=1280&bih=609&dpr=2.75">Google Royal Enfield</a></li>
+            <li class="link"><a href="https://www.google.com/account/about/?hl=en">Accounts</a></li>
+            <li class="link"><a href="https://www.youtube.com/?gl=IN&tab=w1">Youtube</a></li>
+            <li class="link"><a href="https://www.youtube.com/watch?v=BsDoLVMnmZs">Youtube Video</a></li>
+            <li class="link"><a href="https://www.youtubekids.com/?source=youtube_web">Youtube Kids</a></li>
+            <li class="link"><a href="https://www.facebook.com/">facebook</a></li>
+            <li class="link"><a href="https://www.facebook.com/iitceyamunavihar">facebook yamuma vihar</a></li>
+        </ul>
+        
+
+        <div id="ot2"></div>
+
+    </div>
+
+
+
+</body>
+<script>
+    function tryFunc(){
+        // const a = {age:20,
+        //             name:"Rahul",
+        //             job:"Engineer",
+        //             company:"Jhola Chhap"};
+        
+        // document.getElementById('ot').innerHTML = a.company;
+            
+        let a = document;
+        
+        // a = document.children;
+
+        console.log(a);
+
+        document.getElementById('ot').innerHTML = a;
+
+    }
+
+
+    function linkSearch(){
+        onlyLink();
+        let inp = document.getElementById('si').value;
+        inp = inp.toLowerCase();
+
+        const dt = document.getElementsByClassName('link');
+
+        for (let index = 0; index < dt.length; index++) {
+            if(!dt[index].innerHTML.toLowerCase().includes(inp)){
+                dt[index].style.display = "none";
+            }else{
+                dt[index].style.display = "";
+            }
+            
+        }
+        
+    }
+
+    function onlyLink(){
+        let inp = document.getElementById('si').value;
+        inp = inp.toLowerCase();
+
+        let a = document.links;
+        let temp = "<ul>";
+        Array.from(a).forEach(function(el){
+            if(el.href.includes(inp)){
+                temp += "<li>" + el + "</li>";
+            }
+        });
+
+        temp += "</ul>";
+
+        document.getElementById('ot2').innerHTML = temp;
+
+    }
+
+function tryCatchFunc(){
+    try{
+        ary.push('sourabh');
+    }
+    catch(err){
+        document.getElementById('ott').innerHTML = err.message;
+    }
+    finally{
+        
+    }
+}
+
+</script>
+</html>

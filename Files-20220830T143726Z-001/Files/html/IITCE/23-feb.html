@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <input type="text" id="usri" placeholder="enter here">
+    <input type="button" value="Add" onclick="addElement()">
+    <input type="Button" value="show data" onclick = "showData()">
+    <input type="Button" value="Delete" onclick = "delData()">
+    <input type="Button" value="Sort" onclick = "sortData()">
+    <input type="Button" value="Reverse" onclick = "revData()">
+    <input type="Button" value="Sort Num" onclick = "numSortData()">
+    <input type="Button" value="Reverse Num" onclick = "numRevData()">
+    <input type="Button" value="Sort loop" onclick = "loopSortData()">
+    <p id="ot"></p>
+</body>
+<script>
+    var temp = [];
+
+    function addElement(){
+        let n = document.getElementById('usri').value;
+        temp[temp.length] = n;
+        document.getElementById('usri').value = "";
+        showData();
+    }
+
+    function showData(){
+        document.getElementById('ot').innerHTML = "";
+        for(let a = 0; a< temp.length; a++){
+            document.getElementById('ot').innerHTML += temp[a] + "<br>";
+        }
+    }
+
+    function delData(){
+        temp.pop();
+        showData();
+    }
+    
+    function sortData(){
+        temp.sort();
+       showData();
+    }
+
+    function revData(){
+        temp.reverse();
+        showData();
+    }
+
+    function numSortData(){
+        temp.sort(function(a,b){return a-b;});
+       showData();
+    }
+
+    function numRevData(){
+        temp.sort(function(a,b){return b-a;});
+       showData();
+    }
+   
+    function loopSortData(){
+        // bubble Sorting mathod 
+        let t = 0;
+
+        for(let a=0; a<temp.length; a++){
+            for(let b = 0; b < temp.length - a; b++){
+                
+                if(temp[b]>temp[b+1]){
+                    t = temp[b];
+                    temp[b] = temp[b+1];
+                    temp[b+1] = t;
+                }
+
+            }
+        }
+
+       showData();
+    }
+
+</script>
+</html>

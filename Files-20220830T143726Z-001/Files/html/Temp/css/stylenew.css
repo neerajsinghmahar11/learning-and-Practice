@@ -1,0 +1,32 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+.mydiv{
+	background-color:tomato;
+	color:white;
+	padding:25px;
+	height:200px;
+	width:200px;
+	border-radius:50%;
+	box-sizing:border-box;
+	text-align:center;
+	margin:5%;
+	animation-name:test;
+	animation-duration:4s;
+	position:relative; 
+}
+
+.mydiv p{
+	font-size:2em;
+}
+
+@keyframes test{
+	0%{left:0;top:0;}
+	20%{top:350px;left:100px;}
+	40%{top:150px;left:200px;}
+	60%{top:350px;left:400px;}
+	80%{top:250px;left:450px;}
+	100%{top:350px;left:550px;}
+}

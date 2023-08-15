@@ -1,0 +1,105 @@
+<!DOctype HTML>
+<html>
+	<head>
+		<title>CSS form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style type="text/css">
+		
+			label,input{
+				font-family:Arial;
+				font-size:1em;
+				width:100%;
+				height:40px;
+				border-radius:10px;
+				border:none;
+				padding:2px 3px 0px 5px;
+			}
+			
+			input{
+				border-bottom:2px solid black;
+			}
+			
+			input[type=file]{
+				border:none;				
+			}
+			
+			input[type=submit],input[type=reset]{
+				
+				width:48%;
+				border:2px solid black;
+				background-color:tomato;
+				color:white;
+				font-size:20px;					
+			}
+			
+		</style>
+	</head>
+	<bodY>
+	<div style="border:0px solid black;height:100%;margin:20px;padding:20px;">
+		<span><h1>CSS ForM</h1></span>
+		
+		<div style="border:0px solid red;width:45%;float:left;height:400px;">
+			
+			<fieldset>
+				<legend>Login Form</legend>		
+				<form action="#" method="POST">
+				<label name="username">Username</label><br>
+				<input type="text" name="username" placeholder="Username" required>
+				
+				<br>
+				<br>
+				
+				<label name="password">Password</label><br>
+				<input type="Password" name="password" placeholder="Password" required>
+				
+				<br>
+				<br>
+				<br>
+				<input type="submit" name="submit" value="Login">
+				<input type="reset" name="reset" value="Clear all">
+				
+				</form>
+			</fieldset>
+		</div>
+		
+		<div style="border:0px solid red;width:45%;float:right;">
+		<fieldset>
+			<legend>Signup Form</legend><br>
+			<form action="www.google.com" method="GET" autocomplete=OFF>
+				<label name="name">Full Name</label><br>
+				<input type="text" name="name" placeholder="Enter your full Name" required>
+				
+				<br>
+				<br>
+				
+				<label name="DOB">DOB(with time)</label><br>
+					<input type="datetime-local" name="DOB" required>
+					
+				<br>
+				<br>
+				<label name="month">Joining Month and year</label><br>
+					<input type="month" name="month" >
+				
+				<br>
+				<br>
+				<label name="dp">ProfilePhoto</label><br>
+					<input type="file" name="dp">
+					
+				<br>
+				<br>
+				<label name="Phone">Phone </label><br>
+					<input type="tel" name="phone" placeholder="91-123xxxxx5" pattern="[0-9]{10}">
+				
+				
+				<br>
+				<br>
+				
+				<input type="submit" name="submit" value="Login">
+				<input type="reset" name="reset" value="Clear all">
+			</form>
+		</fieldset>
+				
+		</div>
+	</div>	
+	</body>
+</html>

@@ -1,0 +1,74 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+/* Properties for big screen */
+
+
+*{
+	box-sizing:border-box;
+	font-size:20px;
+}
+
+.box{
+	height:200px;
+	width:100%;
+	background-color:black;
+}
+
+.box nav div{
+	float:left;
+	text-align:center;
+}
+
+
+.box nav a{
+	text-decoration:none;
+	display:block;
+	color:white;
+	padding:39px;
+}
+
+.box nav a:hover{
+	background-color:#aaa;
+	font-size:25px;
+}
+
+/* Properties for small screen */
+
+
+@media screen and (max-width:600px){
+	
+	
+*{
+	box-sizing:border-box;
+	font-size:15px;
+}
+
+.box{
+	height:500px;
+	width:100%;
+	background-color:black;
+}
+
+.box nav div{
+	float:none;
+	position:sticky;
+	position:-webkit-sticky;
+}
+
+
+.box nav a{
+	text-decoration:none;
+	display:block;
+	color:white;
+	padding:30px;
+}
+
+.box nav a:hover{
+	background-color:#aaa;
+	font-size:20px;
+}
+	
+}

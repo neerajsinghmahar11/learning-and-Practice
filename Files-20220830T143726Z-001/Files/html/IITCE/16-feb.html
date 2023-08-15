@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Program</title>
+</head>
+<body>
+    <h1>Pattern Program</h1>
+    <p id="output"></p>
+    <button onclick="pattern1()">Pattern 1</button>
+    <button onclick="pattern2()">Pattern 2</button>
+    <button onclick="pattern3()">Pattern 3</button>
+    <button onclick="pattern4()">Pattern 4</button>
+    <button onclick="pattern5()">Pattern 5</button>
+</body>
+<script>
+    function pattern1(){
+        let ot = "";
+        let n = 5;
+
+        for(let a = 1;a <= n; a++){
+            for(let i = 1; i<=n; i++ ){
+                ot += "* ";
+            }
+            ot += "<br>";
+        }
+        document.getElementById('output').innerHTML = ot;
+    }
+   
+    function pattern2(){
+        let ot = "";
+        let n = 5;
+
+        for(let a = 1;a <= n; a++){
+            for(let i = 1; i<=a; i++ ){
+                ot += "* ";
+            }
+            ot += "<br>";
+        }
+        document.getElementById('output').innerHTML = ot;
+    }
+    function pattern3(){
+        let ot = "";
+        let n = 5;
+
+        for(let a = 1;a <= n; a++){
+            for(let i = 1; i<=a; i++ ){
+                ot += a + " ";
+            }
+            ot += "<br>";
+        }
+        document.getElementById('output').innerHTML = ot;
+    }
+    
+    function pattern4(){
+        let ot = "";
+        let n = 5;
+
+        for(let a = 1;a <= n; a++){
+            for(let i = n; i>=a; i-- ){
+                ot += "* ";
+            }
+            ot += "<br>";
+        }
+        document.getElementById('output').innerHTML = ot;
+    }
+
+    function pattern5(){
+        let ot = "";
+        let n = 5;
+
+        for(let a = 1;a <= n; a++){
+            for(let i = 1; i <= n; i++ ){
+                if(a === 1 || a === n){
+                    ot += "*";
+                }else{
+                    if(i===1||i===n){
+                        ot += "*";
+                    }
+                    else{
+                        ot+="&nbsp;&nbsp;";
+                    }
+                }
+
+                
+            }
+            ot += "<br>";
+        }
+        document.getElementById('output').innerHTML = ot;
+    }
+   
+</script>
+</html>

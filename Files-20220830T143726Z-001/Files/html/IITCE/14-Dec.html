@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <script>
+        function sourbhTest(){
+            let a = 100;
+            document.getElementById('test1').innerHTML = a;
+
+            {
+                let a = 80;
+                document.getElementById('test2').innerHTML = a;
+            }
+
+            document.getElementById('test3').innerHTML = a;
+        }
+    </script>
+</head>
+<body>
+    <h2 id="test1">Output Comes Here..</h2>
+    <h2 id="test2">Output Comes Here..</h2>
+    <h2 id="test3">Output Comes Here..</h2>
+    <button onclick="sourbhTest()">TRY ME</button>
+</body>
+</html>

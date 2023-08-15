@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+   <h1>Date and Time Functions</h1>
+   <h2 id="ot"></h2> 
+   <button onclick="getDateData()">Today Date</button>
+   <button onclick="getDateStringData()">Today Date STRINg</button>
+   <button onclick="getDateISOData()">Today Date ISO</button>
+   <button onclick="getManualDateData()">Manual Date</button>
+   <button onclick="getMillisecondData()">Millisecond</button>
+   <button onclick="getYearData()">Year</button>
+   <button onclick="getMonthData()">Month</button>
+   <button onclick="getMonthDateData()">Date</button>
+   <button onclick="getHoursData()">Hours</button>
+   <button onclick="getMinuteData()">Minute</button>
+   <button onclick="getSecondData()">Second</button>
+   <button onclick="getMSData()">Millisecond</button>
+   <button onclick="getTimeData()">1970 to Millisecond</button>
+   <button onclick="getDayData()">Weekday</button>
+   <button onclick="datenowData()">Date Now</button>
+</body>
+<script>
+    const dt = new Date();
+    
+    function getDateData(){
+        document.getElementById('ot').innerHTML = "" + dt;
+    }
+    
+    function getDateStringData(){
+        document.getElementById('ot').innerHTML = "" + dt.toDateString();
+    }
+  
+    function getDateISOData(){
+        document.getElementById('ot').innerHTML = "" + dt.toISOString();
+    }
+    
+    function getManualDateData(){
+        /* String, Comma, only year,year-month,ISO format*/
+        const md = new Date(2018,08,17,11,30,30,56);
+        document.getElementById('ot').innerHTML = "" + md;
+    }
+
+    function getMillisecondData(){
+        var mm = Date.parse(dt);
+        document.getElementById('ot').innerHTML = "" + mm;
+    }
+    
+    function getYearData(){
+        document.getElementById('ot').innerHTML = "" + dt.getFullYear();
+    }
+    
+    function getMonthData(){
+        var mn = ["Jan","Feb","Mar","Aprl","May","Jun","July","Aug","Sep","Oct","Nov","Dec"];
+        document.getElementById('ot').innerHTML = "" + mn[dt.getMonth()];
+    }
+    
+    function getMonthDateData(){
+        document.getElementById('ot').innerHTML = "" + dt.getDate();
+    }
+    
+    function getHoursData(){
+        document.getElementById('ot').innerHTML = "" + dt.getHours();
+    }
+ 
+    function getMinuteData(){
+        document.getElementById('ot').innerHTML = "" + dt.getMinutes();
+    }
+
+    function getSecondData(){
+        document.getElementById('ot').innerHTML = "" + dt.getSeconds();
+    }
+   
+    function getMSData(){
+        document.getElementById('ot').innerHTML = "" + dt.getMilliseconds();
+    }
+
+    function getTimeData(){
+        document.getElementById('ot').innerHTML = "" + dt.getTime();
+    }
+    
+    function getDayData(){
+        document.getElementById('ot').innerHTML = "" + dt.getDay();
+    }
+    
+    function datenowData(){
+        document.getElementById('ot').innerHTML = "" + Date.now();
+    }
+
+</script>
+</html>
